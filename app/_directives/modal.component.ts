@@ -50,12 +50,14 @@ export class ModalComponent implements OnInit, OnDestroy {
     // open modal
     open(): void {
         this.element.show();
+        this.element.children('div').show();
         $('body').addClass('modal-open');
     }
 
     // close modal
     close(): void {
         this.element.hide();
+        this.element.children('div').hide();
         $('body').removeClass('modal-open');
     }
 }
